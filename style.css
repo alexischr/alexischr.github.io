@@ -28,19 +28,19 @@
 
 :root {
   /* Colors — edit these to change the whole palette */
-  --bg:          #0d0f14;
-  --bg-alt:      #111318;
-  --surface:     #181b22;
-  --border:      #252830;
-  --text:        #e2e4ea;
-  --text-muted:  #7a7f8e;
-  --accent:      #5b8dee;
-  --accent-dim:  #3a5fa8;
-  --green:       #4ade80;
-  --orange:      #fb923c;
-  --purple:      #a78bfa;
-  --yellow:      #fbbf24;
-  --red:         #f87171;
+  --bg:          rgb(255, 255, 225);
+  --bg-alt:      rgb(248, 248, 210);
+  --surface:     rgb(242, 242, 200);
+  --border:      rgb(210, 210, 175);
+  --text:        #0d1226;
+  --text-muted:  #3d4a6b;
+  --accent:      #1a3a8f;
+  --accent-dim:  #0f2460;
+  --green:       #166534;
+  --orange:      #c2410c;
+  --purple:      #5b21b6;
+  --yellow:      #92400e;
+  --red:         #991b1b;
 
   --font-body:   'Inter', system-ui, sans-serif;
   --font-mono:   'JetBrains Mono', 'Fira Code', monospace;
@@ -131,7 +131,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 #nav.nav-scrolled {
-  background: rgba(13, 15, 20, .88);
+  background: rgba(255, 255, 225, .92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-color: var(--border);
@@ -496,7 +496,7 @@ p:last-child { margin-bottom: 0; }
   height: 9px;
   border-radius: 50%;
   background: var(--accent);
-  border: 2px solid var(--bg);
+  border: 2px solid var(--bg-alt);
 }
 .timeline-item:last-child { padding-bottom: .5rem; }
 
@@ -653,8 +653,8 @@ p:last-child { margin-bottom: 0; }
   background: linear-gradient(
     160deg,
     var(--bg) 0%,
-    #0f1420 60%,
-    #0d1535 100%
+    rgb(245, 245, 205) 60%,
+    rgb(235, 240, 215) 100%
   );
 }
 
