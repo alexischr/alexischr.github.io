@@ -4,113 +4,113 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alexis Christoforides</title>
-  <meta name="description" content="Alexis Christoforides — software engineer based in Boston. Embedded systems, .NET runtime, developer tooling. Available for contract work." />
+  <meta name="description" content="Alexis Christoforides — software engineer based in Boston. Embedded systems, .NET runtime, developer tooling. Open to contract work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ===================== NAVIGATION ===================== -->
+  <!-- NAV -->
   <nav id="nav">
     <div class="nav-inner">
       <a class="nav-logo" href="#top">Alexis Christoforides</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#work">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ===================== HERO ===================== -->
-  <section id="top" class="hero">
-    <div class="hero-inner">
-      <h1 class="hero-name">Alexis Christoforides</h1>
-      <p class="hero-intro">
-        I'm a software engineer based in Boston. I work on operating systems,
-        language runtimes, and embedded systems — the lower layers that most
-        projects either inherit or try to avoid.
-      </p>
-      <p class="hero-intro">
-        I'm currently available for contract work.
-        <a href="mailto:alexis@thenull.net">Get in touch</a> if you have something interesting.
-      </p>
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="container">
+      <h1 class="hero-name">Alexis<br>Christoforides</h1>
+      <div class="hero-body">
+        <p class="hero-role">Software engineer &amp; consultant · Boston, MA</p>
+        <p class="hero-desc">
+          I build low-level software — operating systems, language runtimes,
+          embedded hardware, developer tooling. Most of my work lives in the
+          layers beneath the application: the infrastructure that makes
+          everything else possible.
+        </p>
+        <p class="hero-desc">
+          I've done this at
+          <a href="https://www.wildernesslabs.co/" target="_blank" rel="noopener">Wilderness Labs</a>,
+          <a href="https://www.microsoft.com/" target="_blank" rel="noopener">Microsoft</a>,
+          <a href="https://github.com/mono" target="_blank" rel="noopener">Xamarin</a>,
+          and <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>.
+          I take on a small number of contract engagements each year.
+          <a href="mailto:alexis@thenull.net">Get in touch</a> if you have something in mind.
+        </p>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <!-- ===================== ABOUT ===================== -->
-  <section id="about" class="section section-alt">
+  <!-- EXPERTISE -->
+  <section id="expertise" class="section section-alt">
     <div class="container two-col">
       <div class="section-label-col">
-        <span class="section-label">About</span>
+        <span class="section-label">Expertise</span>
       </div>
       <div class="section-content-col">
-        <p class="lead">
-          I started out in computational biology at
-          <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>,
-          building the sequencing pipelines and mutation-detection tools used in
-          cancer research. That turned into several years at
-          <a href="https://github.com/mono" target="_blank" rel="noopener">Xamarin</a>
-          and then Microsoft working on the
-          <a href="https://github.com/mono/mono" target="_blank" rel="noopener">Mono runtime</a> —
-          the open-source .NET implementation that Xamarin was built on.
-          More recently, I led the OS team at
-          <a href="https://www.wildernesslabs.co/" target="_blank" rel="noopener">Wilderness Labs</a>,
-          where I built an embedded operating system from scratch that runs
-          .NET on microcontrollers.
-        </p>
-        <p>
-          I have a B.S. in computer science from Arizona State University and have
-          co-authored 41+ peer-reviewed papers in genomics, cited by over 11,000 researchers.
-          My GitHub is <a href="https://github.com/alexischr" target="_blank" rel="noopener">@alexischr</a>.
-        </p>
+        <dl class="expertise-list">
 
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Languages</h3>
-            <ul>
-              <li>C# / .NET</li>
-              <li>F#</li>
-              <li>C / C++</li>
-              <li>Python</li>
-              <li>Java</li>
-              <li>JavaScript</li>
-            </ul>
+          <div class="expertise-item">
+            <dt>Embedded &amp; IoT systems</dt>
+            <dd>
+              Hardware bringup, RTOS integration, hardware abstraction layers,
+              OTA update infrastructure, and running managed runtimes on
+              constrained hardware. I built
+              <a href="https://github.com/wildernesslabs" target="_blank" rel="noopener">Meadow.OS</a>
+              from scratch — a production embedded OS that brings .NET to
+              microcontrollers.
+            </dd>
           </div>
-          <div class="skill-group">
-            <h3>Platforms</h3>
-            <ul>
-              <li>Linux / macOS / Windows</li>
-              <li>NuttX RTOS</li>
-              <li>Mono / .NET Core</li>
-              <li>Xamarin / MAUI</li>
-              <li>ARM / x86</li>
-              <li>GitHub Actions / CI</li>
-            </ul>
+
+          <div class="expertise-item">
+            <dt>Runtime &amp; platform engineering</dt>
+            <dd>
+              Deep .NET and Mono runtime work: JIT/AOT compilation, interop
+              layers, CLR internals, porting managed code to new platforms.
+              I spent several years as a core contributor to
+              <a href="https://github.com/mono/mono" target="_blank" rel="noopener">Mono</a> —
+              the open-source runtime that powered Xamarin.
+            </dd>
           </div>
-          <div class="skill-group">
-            <h3>Areas</h3>
-            <ul>
-              <li>Embedded &amp; IoT</li>
-              <li>OS &amp; runtime engineering</li>
-              <li>Compiler toolchains</li>
-              <li>Build &amp; packaging</li>
-              <li>Bioinformatics</li>
-              <li>Scientific computing</li>
-            </ul>
+
+          <div class="expertise-item">
+            <dt>Developer tooling &amp; build systems</dt>
+            <dd>
+              Build infrastructure, cross-platform packaging, and CI/CD for
+              complex native projects. I built and maintained
+              <a href="https://github.com/mono/bockbuild" target="_blank" rel="noopener">bockbuild</a>,
+              Mono's macOS build and packaging system, for several years.
+            </dd>
           </div>
-        </div>
+
+          <div class="expertise-item">
+            <dt>Scientific computing &amp; bioinformatics</dt>
+            <dd>
+              Genomics pipelines, sequencing data analysis, and cancer mutation
+              detection. I spent three years at TGen building this infrastructure,
+              contributing to the 1000 Genomes Project, and co-authoring 41+
+              peer-reviewed papers with over 11,000 citations.
+            </dd>
+          </div>
+
+        </dl>
       </div>
     </div>
   </section>
 
-  <!-- ===================== WORK ===================== -->
+  <!-- EXPERIENCE -->
   <section id="work" class="section">
     <div class="container two-col">
       <div class="section-label-col">
-        <span class="section-label">Work</span>
+        <span class="section-label">Experience</span>
       </div>
       <div class="section-content-col">
         <ol class="timeline">
@@ -120,75 +120,68 @@
               <span class="timeline-date">2018 — present</span>
               <span class="timeline-location">Boston, MA</span>
             </div>
-            <div class="timeline-body">
-              <h2 class="timeline-title">OS Engineer Lead</h2>
-              <p class="timeline-org">
-                <a href="https://www.wildernesslabs.co/" target="_blank" rel="noopener">Wilderness Labs</a>
-              </p>
-              <p>
-                Built Meadow.OS — a production embedded operating system on NuttX RTOS
-                that brings .NET to microcontrollers. Covered the full stack: kernel
-                integration, hardware abstraction, OTA updates, and the managed C# APIs
-                developers use to talk to hardware.
-              </p>
-            </div>
+            <h2 class="timeline-title">OS Engineer Lead</h2>
+            <p class="timeline-org">
+              <a href="https://www.wildernesslabs.co/" target="_blank" rel="noopener">Wilderness Labs</a>
+            </p>
+            <p>
+              Led development of Meadow.OS — a full embedded operating system on
+              NuttX RTOS that brings .NET to microcontrollers and SoC hardware.
+              Responsible for the OS architecture, hardware abstraction layers,
+              OTA update system, and the managed C# APIs that developers use to
+              talk to hardware.
+            </p>
           </li>
 
           <li class="timeline-item">
             <div class="timeline-meta">
-              <span class="timeline-date">~2015 — 2018</span>
+              <span class="timeline-date">2015 — 2018</span>
               <span class="timeline-location">San Francisco, CA</span>
             </div>
-            <div class="timeline-body">
-              <h2 class="timeline-title">Software Engineer</h2>
-              <p class="timeline-org">
-                <a href="https://www.microsoft.com/" target="_blank" rel="noopener">Microsoft</a>
-                <span class="via">(via Xamarin acquisition)</span>
-              </p>
-              <p>
-                Continued runtime work after Microsoft acquired Xamarin.
-                Contributed to the Mono runtime, owned the
-                <a href="https://github.com/mono/bockbuild" target="_blank" rel="noopener">bockbuild</a>
-                macOS packaging pipeline, and worked on Roslyn and F# tooling.
-              </p>
-            </div>
+            <h2 class="timeline-title">Software Engineer</h2>
+            <p class="timeline-org">
+              <a href="https://www.microsoft.com/" target="_blank" rel="noopener">Microsoft</a>
+              <span class="via">(via Xamarin acquisition)</span>
+            </p>
+            <p>
+              Continued runtime work after Microsoft acquired Xamarin. Contributed
+              to the Mono runtime, owned the bockbuild macOS packaging pipeline,
+              and worked on Roslyn and F# tooling.
+            </p>
           </li>
 
           <li class="timeline-item">
             <div class="timeline-meta">
-              <span class="timeline-date">~2013 — 2015</span>
+              <span class="timeline-date">2013 — 2015</span>
               <span class="timeline-location">San Francisco, CA</span>
             </div>
-            <div class="timeline-body">
-              <h2 class="timeline-title">Software Engineer</h2>
-              <p class="timeline-org">
-                <a href="https://github.com/mono" target="_blank" rel="noopener">Xamarin</a>
-              </p>
-              <p>
-                Worked on the Mono project — the open-source .NET runtime underlying
-                Xamarin's cross-platform mobile SDK. Maintained the macOS distribution
-                pipeline.
-              </p>
-            </div>
+            <h2 class="timeline-title">Software Engineer</h2>
+            <p class="timeline-org">
+              <a href="https://github.com/mono" target="_blank" rel="noopener">Xamarin</a>
+            </p>
+            <p>
+              Worked on the Mono project — the open-source .NET runtime underlying
+              Xamarin's mobile SDK. Built and maintained the macOS distribution
+              pipeline.
+            </p>
           </li>
 
           <li class="timeline-item">
             <div class="timeline-meta">
-              <span class="timeline-date">~2010 — 2013</span>
+              <span class="timeline-date">2010 — 2013</span>
               <span class="timeline-location">Phoenix, AZ</span>
             </div>
-            <div class="timeline-body">
-              <h2 class="timeline-title">Software Engineer &amp; Bioinformatician</h2>
-              <p class="timeline-org">
-                <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>
-              </p>
-              <p>
-                Built DNA sequencing pipelines and cancer mutation-detection tools,
-                including <a href="https://github.com/alexischr/seurat" target="_blank" rel="noopener">Seurat</a>,
-                a tool for identifying somatic mutations from paired tumor/normal genomes.
-                Contributed to the 1000 Genomes Project. Co-author on 41+ peer-reviewed papers.
-              </p>
-            </div>
+            <h2 class="timeline-title">Software Engineer &amp; Bioinformatician</h2>
+            <p class="timeline-org">
+              <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>
+            </p>
+            <p>
+              Built DNA sequencing pipelines and cancer mutation-detection tools
+              for genomics research, including
+              <a href="https://github.com/alexischr/seurat" target="_blank" rel="noopener">Seurat</a>,
+              a somatic mutation analysis tool for paired tumor/normal sequencing.
+              Contributed to the 1000 Genomes Project.
+            </p>
           </li>
 
         </ol>
@@ -204,12 +197,11 @@
             <a href="https://github.com/wildernesslabs" target="_blank" rel="noopener" class="oss-pill">Meadow.OS</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===================== CONTACT ===================== -->
+  <!-- CONTACT -->
   <section id="contact" class="section section-alt">
     <div class="container two-col">
       <div class="section-label-col">
@@ -217,29 +209,20 @@
       </div>
       <div class="section-content-col">
         <p class="lead">
-          I'm open to contract work — embedded systems, .NET/runtime engineering,
-          developer tooling, or anything in that space. Drop me an email and we can
-          go from there.
+          I take on contract work in the areas above — typically project-based
+          or short retainers. If something fits, I'm happy to have a conversation.
         </p>
         <div class="contact-links">
-          <a class="contact-link" href="mailto:alexis@thenull.net">
-            alexis@thenull.net
-          </a>
-          <a class="contact-link" href="https://github.com/alexischr" target="_blank" rel="noopener">
-            GitHub
-          </a>
-          <a class="contact-link" href="https://www.linkedin.com/in/alexis-christoforides-997260180/" target="_blank" rel="noopener">
-            LinkedIn
-          </a>
-          <a class="contact-link" href="https://bsky.app/profile/thenull.net" target="_blank" rel="noopener">
-            Bluesky
-          </a>
+          <a href="mailto:alexis@thenull.net" class="contact-primary">alexis@thenull.net</a>
+          <a href="https://github.com/alexischr" target="_blank" rel="noopener" class="contact-secondary">GitHub</a>
+          <a href="https://www.linkedin.com/in/alexis-christoforides-997260180/" target="_blank" rel="noopener" class="contact-secondary">LinkedIn</a>
+          <a href="https://bsky.app/profile/thenull.net" target="_blank" rel="noopener" class="contact-secondary">Bluesky</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <p>Alexis Christoforides · Boston, MA · <span id="year"></span></p>
@@ -248,11 +231,10 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('nav-scrolled', window.scrollY > 40);
-    });
+    }, { passive: true });
   </script>
 </body>
 </html>
