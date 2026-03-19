@@ -1,20 +1,8 @@
 /* ============================================================
    ALEXIS CHRISTOFORIDES — style.css
-   Edit freely. Sections:
-     1. Reset & base
-     2. Typography
-     3. Layout
-     4. Navigation
-     5. Hero
-     6. Expertise list
-     7. Timeline
-     8. OSS pills
-     9. Contact
-    10. Footer
-    11. Responsive
    ============================================================ */
 
-/* ── 1. Reset & base ─────────────────────────────────────── */
+/* ── Reset & base ────────────────────────────────────────── */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -26,14 +14,14 @@
   --text:       #0c1220;
   --muted:      #4a5570;
   --accent:     #1a3585;
-  --accent-h:   #0f2260;  /* hover */
+  --accent-h:   #0f2260;
 
   --serif:  'DM Serif Display', Georgia, serif;
   --sans:   'Inter', system-ui, sans-serif;
   --mono:   'JetBrains Mono', 'Fira Code', monospace;
 
   --nav-h:      58px;
-  --max-w:      960px;
+  --max-w:      940px;
   --col-label:  140px;
   --py:         88px;
 }
@@ -49,7 +37,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── 2. Typography ───────────────────────────────────────── */
+::selection {
+  background: rgba(26, 53, 133, .14);
+}
+
+/* ── Typography ──────────────────────────────────────────── */
 
 p { margin-bottom: 1rem; }
 p:last-child { margin-bottom: 0; }
@@ -59,7 +51,7 @@ a {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
-  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  text-decoration-color: rgba(26, 53, 133, .35);
   transition: color .15s, text-decoration-color .15s;
 }
 a:hover {
@@ -72,10 +64,10 @@ ul, ol { list-style: none; }
 .lead {
   font-size: 1.05rem;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
-/* ── 3. Layout ───────────────────────────────────────────── */
+/* ── Layout ──────────────────────────────────────────────── */
 
 .container {
   max-width: var(--max-w);
@@ -107,7 +99,7 @@ ul, ol { list-style: none; }
   text-decoration: none;
 }
 
-/* ── 4. Navigation ───────────────────────────────────────── */
+/* ── Navigation ──────────────────────────────────────────── */
 
 #nav {
   position: fixed;
@@ -137,106 +129,97 @@ ul, ol { list-style: none; }
 
 .nav-logo {
   font-family: var(--serif);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--text);
   text-decoration: none;
-  letter-spacing: .01em;
 }
 .nav-logo:hover { color: var(--accent); text-decoration: none; }
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
+.nav-links { display: flex; gap: 2rem; }
 
 .nav-links a {
   font-size: .85rem;
   color: var(--muted);
   text-decoration: none;
-  letter-spacing: .01em;
   transition: color .15s;
 }
 .nav-links a:hover { color: var(--text); text-decoration: none; }
 
-/* ── 5. Hero ─────────────────────────────────────────────── */
+/* ── Hero ────────────────────────────────────────────────── */
 
 .hero {
-  padding-top: calc(var(--nav-h) + 6rem);
-  padding-bottom: 5.5rem;
-}
-
-.hero .container {
-  display: grid;
-  grid-template-columns: var(--col-label) 1fr;
-  column-gap: 3.5rem;
-  align-items: start;
+  padding-top: calc(var(--nav-h) + 5.5rem);
+  padding-bottom: 5rem;
 }
 
 .hero-name {
   font-family: var(--serif);
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.1;
   color: var(--text);
   letter-spacing: -.01em;
-  /* Sits in the label column, overflows slightly */
-  grid-column: 1 / 2;
-  padding-top: .15rem;
 }
 
-.hero-body {
-  grid-column: 2 / 3;
+.hero-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.75rem 0;
+  max-width: 280px;
 }
 
 .hero-role {
   font-family: var(--mono);
-  font-size: .78rem;
-  letter-spacing: .08em;
+  font-size: .76rem;
+  letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-body {
+  max-width: 600px;
 }
 
 .hero-desc {
   font-size: 1rem;
   color: var(--muted);
-  line-height: 1.8;
-  max-width: 560px;
-  margin-bottom: .85rem;
+  line-height: 1.85;
+  margin-bottom: .75rem;
 }
 
-/* ── 6. Expertise list ───────────────────────────────────── */
+/* ── Expertise list ──────────────────────────────────────── */
 
 .expertise-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .expertise-item {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 210px 1fr;
   column-gap: 2.5rem;
-  padding-block: 1.75rem;
+  padding-block: 1.65rem;
   border-top: 1px solid var(--border);
   align-items: baseline;
 }
 .expertise-item:last-child { border-bottom: 1px solid var(--border); }
 
 .expertise-item dt {
-  font-size: .95rem;
-  font-weight: 600;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
   color: var(--text);
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .expertise-item dd {
-  font-size: .93rem;
+  font-size: .92rem;
   color: var(--muted);
   line-height: 1.75;
 }
 
-/* ── 7. Timeline ─────────────────────────────────────────── */
+/* ── Timeline ────────────────────────────────────────────── */
 
 .timeline {
   display: flex;
@@ -252,16 +235,16 @@ ul, ol { list-style: none; }
   content: '';
   position: absolute;
   left: -4px;
-  top: 2.1rem;
+  top: 2.05rem;
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: var(--bg);
-  border: 2px solid var(--accent);
+  border: 2px solid var(--border);
 }
-/* Current role gets a filled dot */
 .timeline-item:first-child::before {
   background: var(--accent);
+  border-color: var(--accent);
 }
 .timeline-item:last-child { padding-bottom: 0; }
 
@@ -295,17 +278,17 @@ ul, ol { list-style: none; }
 }
 .via {
   font-size: .78rem;
-  opacity: .6;
+  opacity: .55;
 }
 
-.timeline-item p {
-  font-size: .93rem;
+.timeline-item > p {
+  font-size: .92rem;
   color: var(--muted);
   line-height: 1.75;
-  max-width: 580px;
+  max-width: 560px;
 }
 
-/* ── 8. OSS pills ────────────────────────────────────────── */
+/* ── OSS pills ───────────────────────────────────────────── */
 
 .oss-strip {
   margin-top: 2.5rem;
@@ -337,43 +320,50 @@ ul, ol { list-style: none; }
   color: var(--muted);
   background: var(--surface);
   text-decoration: none;
-  transition: border-color .15s, color .15s, background .15s;
+  transition: border-color .15s, color .15s;
 }
 .oss-pill:hover {
   border-color: var(--accent);
   color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 6%, var(--surface));
 }
 
-/* ── 9. Contact ──────────────────────────────────────────── */
+/* ── Contact ─────────────────────────────────────────────── */
 
 .contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: .6rem 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: .85rem;
 }
 
 .contact-primary {
-  font-size: 1rem;
+  font-family: var(--mono);
+  font-size: .95rem;
   font-weight: 500;
   color: var(--accent);
-  letter-spacing: -.01em;
+  padding: .45rem .9rem;
+  border: 1px solid rgba(26, 53, 133, .25);
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color .15s, background .15s;
+}
+.contact-primary:hover {
+  border-color: var(--accent);
+  background: rgba(26, 53, 133, .06);
+  text-decoration: none;
 }
 
-.contact-secondary {
-  font-size: .9rem;
+.contact-elsewhere {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.contact-elsewhere a {
+  font-size: .88rem;
   color: var(--muted);
 }
 
-.contact-secondary::before {
-  content: '·';
-  margin-right: 1.5rem;
-  color: var(--border);
-  font-size: .9rem;
-}
-
-/* ── 10. Footer ──────────────────────────────────────────── */
+/* ── Footer ──────────────────────────────────────────────── */
 
 .footer {
   border-top: 1px solid var(--border);
@@ -383,11 +373,11 @@ ul, ol { list-style: none; }
 .footer p {
   font-size: .8rem;
   color: var(--muted);
-  opacity: .7;
+  opacity: .65;
   margin: 0;
 }
 
-/* ── 11. Responsive ──────────────────────────────────────── */
+/* ── Responsive ──────────────────────────────────────────── */
 
 @media (max-width: 760px) {
   :root { --py: 60px; --col-label: 100px; }
@@ -400,12 +390,6 @@ ul, ol { list-style: none; }
     gap: 0;
   }
 
-  .hero-name {
-    grid-column: 1;
-    margin-bottom: 1.75rem;
-  }
-  .hero-body { grid-column: 1; }
-
   .section-label {
     position: static;
     margin-bottom: .75rem;
@@ -413,14 +397,13 @@ ul, ol { list-style: none; }
 
   .expertise-item {
     grid-template-columns: 1fr;
-    gap: .4rem;
+    gap: .35rem;
   }
 
-  .contact-secondary::before { display: none; }
-  .contact-links { flex-direction: column; align-items: flex-start; gap: .65rem; }
+  .contact-elsewhere { flex-wrap: wrap; gap: .75rem 1.25rem; }
 }
 
 @media (max-width: 480px) {
   .nav-links { display: none; }
-  .hero-name { font-size: 2.5rem; }
+  .hero-name { font-size: 2.2rem; }
 }
