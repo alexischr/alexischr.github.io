@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexis Christoforides — Software Consultant</title>
-  <meta name="description" content="Alexis Christoforides — Software consultant specializing in embedded systems, .NET runtime engineering, and developer tooling. Based in Boston, MA. Available for contracts." />
+  <title>Alexis Christoforides</title>
+  <meta name="description" content="Alexis Christoforides — software engineer based in Boston. Embedded systems, .NET runtime, developer tooling. Available for contract work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -15,13 +15,11 @@
   <!-- ===================== NAVIGATION ===================== -->
   <nav id="nav">
     <div class="nav-inner">
-      <a class="nav-logo" href="#top">AC</a>
+      <a class="nav-logo" href="#top">Alexis Christoforides</a>
       <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#contact" class="nav-cta">Let's talk</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -29,125 +27,16 @@
   <!-- ===================== HERO ===================== -->
   <section id="top" class="hero">
     <div class="hero-inner">
-      <p class="hero-label">Available for contracts · Boston, MA</p>
-      <h1 class="hero-headline">
-        I work on the software<br/>beneath your software.
-      </h1>
-      <p class="hero-tagline">
-        Runtime engineering. Embedded systems. Developer tooling.<br/>
-        The hard problems most teams don't have the depth to solve in-house.
+      <h1 class="hero-name">Alexis Christoforides</h1>
+      <p class="hero-intro">
+        I'm a software engineer based in Boston. I work on operating systems,
+        language runtimes, and embedded systems — the lower layers that most
+        projects either inherit or try to avoid.
       </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#contact">Get in touch</a>
-        <a class="btn btn-secondary" href="#services">See what I do</a>
-      </div>
-      <p class="hero-name-tag">Alexis Christoforides &mdash; <span class="mono">alexischr</span></p>
-    </div>
-    <div class="hero-scroll-hint" aria-hidden="true">↓</div>
-  </section>
-
-  <!-- ===================== CREDIBILITY BAR ===================== -->
-  <div class="cred-bar">
-    <div class="container">
-      <p class="cred-label">Previously shipped software used by millions at</p>
-      <ul class="cred-logos">
-        <li><span class="cred-logo">Microsoft</span></li>
-        <li class="cred-sep" aria-hidden="true">·</li>
-        <li><span class="cred-logo">Xamarin</span></li>
-        <li class="cred-sep" aria-hidden="true">·</li>
-        <li><span class="cred-logo">Wilderness Labs</span></li>
-        <li class="cred-sep" aria-hidden="true">·</li>
-        <li><span class="cred-logo">TGen</span></li>
-        <li class="cred-sep" aria-hidden="true">·</li>
-        <li><span class="cred-logo">1000 Genomes Project</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ===================== SERVICES ===================== -->
-  <section id="services" class="section">
-    <div class="container two-col">
-      <div class="section-label-col">
-        <span class="section-label">Services</span>
-      </div>
-      <div class="section-content-col">
-        <p class="lead">
-          I take on contract work where deep platform knowledge matters —
-          where a generalist won't cut it and a large agency is overkill.
-        </p>
-        <div class="services-grid">
-
-          <div class="service-card">
-            <div class="service-icon">⬡</div>
-            <h3>Embedded &amp; IoT Systems</h3>
-            <p>
-              Hardware bringup, RTOS integration, hardware abstraction layers,
-              OTA update infrastructure, and running managed runtimes on constrained
-              hardware. I've built a production IoT OS from the ground up.
-            </p>
-            <ul class="service-tags">
-              <li>NuttX RTOS</li><li>.NET on MCUs</li><li>OTA</li><li>HAL design</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">◈</div>
-            <h3>Runtime &amp; Platform Engineering</h3>
-            <p>
-              Deep .NET/Mono runtime work: JIT/AOT compilation, interop layers,
-              CLR internals, and porting managed code to new platforms. I contributed
-              to the Mono runtime that powered Xamarin for millions of mobile developers.
-            </p>
-            <ul class="service-tags">
-              <li>.NET / Mono</li><li>CLR internals</li><li>Interop</li><li>F# / C#</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">⌥</div>
-            <h3>Developer Tooling &amp; Build Systems</h3>
-            <p>
-              Build infrastructure, packaging, cross-platform distribution, and CI/CD
-              for complex native projects. I built and maintained bockbuild — Mono's
-              macOS build and packaging system — for years.
-            </p>
-            <ul class="service-tags">
-              <li>Build systems</li><li>CI/CD</li><li>Packaging</li><li>DX</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">◎</div>
-            <h3>Architecture &amp; Technical Leadership</h3>
-            <p>
-              Greenfield system design, architecture reviews, proof-of-concepts,
-              and technical due diligence. Useful when you need a senior opinion
-              without a full-time hire.
-            </p>
-            <ul class="service-tags">
-              <li>Architecture review</li><li>PoC</li><li>Due diligence</li><li>ADRs</li>
-            </ul>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon">⬟</div>
-            <h3>Scientific Computing &amp; Bioinformatics</h3>
-            <p>
-              Genomics pipelines, sequencing data analysis, and scientific software
-              for research institutions. I spent years at TGen building cancer sequencing
-              infrastructure and co-authored 41+ peer-reviewed papers.
-            </p>
-            <ul class="service-tags">
-              <li>Genomics</li><li>NGS pipelines</li><li>Bioinformatics</li><li>R &amp; Python</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="services-cta-row">
-          <p>Not sure if your problem fits? <a href="#contact">Send me a note</a> — I'll tell you honestly.</p>
-        </div>
-      </div>
+      <p class="hero-intro">
+        I'm currently available for contract work.
+        <a href="mailto:alexis@thenull.net">Get in touch</a> if you have something interesting.
+      </p>
     </div>
   </section>
 
@@ -159,41 +48,24 @@
       </div>
       <div class="section-content-col">
         <p class="lead">
-          I'm Alexis — a computer scientist who has spent his career working on
-          the parts of software that most developers never see.
+          I started out in computational biology at
+          <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>,
+          building the sequencing pipelines and mutation-detection tools used in
+          cancer research. That turned into several years at
+          <a href="https://github.com/mono" target="_blank" rel="noopener">Xamarin</a>
+          and then Microsoft working on the
+          <a href="https://github.com/mono/mono" target="_blank" rel="noopener">Mono runtime</a> —
+          the open-source .NET implementation that Xamarin was built on.
+          More recently, I led the OS team at
+          <a href="https://www.wildernesslabs.co/" target="_blank" rel="noopener">Wilderness Labs</a>,
+          where I built an embedded operating system from scratch that runs
+          .NET on microcontrollers.
         </p>
         <p>
-          I started in cancer genomics research at TGen, building the sequencing pipelines
-          and mutation-detection tools that put numbers behind treatments. Then I spent
-          several years at Xamarin and Microsoft working on the Mono runtime — the engine
-          under the hood of cross-platform .NET. Most recently, I led the OS team at
-          Wilderness Labs, where I built Meadow.OS from scratch: a full embedded operating
-          system that lets .NET developers write firmware the same way they write apps.
+          I have a B.S. in computer science from Arizona State University and have
+          co-authored 41+ peer-reviewed papers in genomics, cited by over 11,000 researchers.
+          My GitHub is <a href="https://github.com/alexischr" target="_blank" rel="noopener">@alexischr</a>.
         </p>
-        <p>
-          I like the problems that sit at the boundary between hardware and software,
-          between managed code and bare metal, between what's theoretically possible
-          and what actually ships. If you have one of those, we should talk.
-        </p>
-
-        <div class="stats-row">
-          <div class="stat">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">years of industry experience</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">41+</span>
-            <span class="stat-label">peer-reviewed publications</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">11k+</span>
-            <span class="stat-label">research citations</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">11.4k★</span>
-            <span class="stat-label">stars on contributed OSS</span>
-          </div>
-        </div>
 
         <div class="skills-grid">
           <div class="skill-group">
@@ -212,20 +84,20 @@
             <ul>
               <li>Linux / macOS / Windows</li>
               <li>NuttX RTOS</li>
-              <li>Mono / .NET Core / CLR</li>
+              <li>Mono / .NET Core</li>
               <li>Xamarin / MAUI</li>
-              <li>ARM / x86 / RISC-V</li>
-              <li>GitHub Actions / CI/CD</li>
+              <li>ARM / x86</li>
+              <li>GitHub Actions / CI</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>Domains</h3>
+            <h3>Areas</h3>
             <ul>
-              <li>Embedded &amp; IoT systems</li>
-              <li>Runtime &amp; OS engineering</li>
+              <li>Embedded &amp; IoT</li>
+              <li>OS &amp; runtime engineering</li>
               <li>Compiler toolchains</li>
-              <li>Build &amp; packaging systems</li>
-              <li>Bioinformatics &amp; genomics</li>
+              <li>Build &amp; packaging</li>
+              <li>Bioinformatics</li>
               <li>Scientific computing</li>
             </ul>
           </div>
@@ -234,19 +106,18 @@
     </div>
   </section>
 
-  <!-- ===================== WORK / EXPERIENCE ===================== -->
+  <!-- ===================== WORK ===================== -->
   <section id="work" class="section">
     <div class="container two-col">
       <div class="section-label-col">
         <span class="section-label">Work</span>
       </div>
       <div class="section-content-col">
-        <p class="lead">A track record of shipping hard things.</p>
         <ol class="timeline">
 
           <li class="timeline-item">
             <div class="timeline-meta">
-              <span class="timeline-date">2018 — Present</span>
+              <span class="timeline-date">2018 — present</span>
               <span class="timeline-location">Boston, MA</span>
             </div>
             <div class="timeline-body">
@@ -255,17 +126,11 @@
                 <a href="https://www.wildernesslabs.co/" target="_blank" rel="noopener">Wilderness Labs</a>
               </p>
               <p>
-                Built Meadow.OS from scratch — a production embedded operating system on top of
-                NuttX RTOS that brings the full .NET runtime to microcontrollers. Designed the
-                OS architecture, hardware abstraction layers, OTA update system, and the managed
-                APIs that .NET developers use to talk to hardware.
+                Built Meadow.OS — a production embedded operating system on NuttX RTOS
+                that brings .NET to microcontrollers. Covered the full stack: kernel
+                integration, hardware abstraction, OTA updates, and the managed C# APIs
+                developers use to talk to hardware.
               </p>
-              <ul class="detail-list">
-                <li>Architected the full OS stack: kernel integration → managed runtime → developer APIs</li>
-                <li>Designed and shipped a robust over-the-air (OTA) update system</li>
-                <li>Built secure, scalable device management infrastructure</li>
-                <li>Bridged managed C# code to native embedded hardware peripherals</li>
-              </ul>
             </div>
           </li>
 
@@ -275,21 +140,17 @@
               <span class="timeline-location">San Francisco, CA</span>
             </div>
             <div class="timeline-body">
-              <h2 class="timeline-title">Software Engineer, .NET Runtime</h2>
+              <h2 class="timeline-title">Software Engineer</h2>
               <p class="timeline-org">
                 <a href="https://www.microsoft.com/" target="_blank" rel="noopener">Microsoft</a>
                 <span class="via">(via Xamarin acquisition)</span>
               </p>
               <p>
-                Contributed to the Mono runtime and its cross-platform toolchain after Microsoft
-                acquired Xamarin. Worked on the .NET runtime infrastructure used by millions
-                of mobile developers worldwide.
+                Continued runtime work after Microsoft acquired Xamarin.
+                Contributed to the Mono runtime, owned the
+                <a href="https://github.com/mono/bockbuild" target="_blank" rel="noopener">bockbuild</a>
+                macOS packaging pipeline, and worked on Roslyn and F# tooling.
               </p>
-              <ul class="detail-list">
-                <li>Core contributions to the Mono ECMA CLI / C# runtime implementation</li>
-                <li>Owned <span class="mono">bockbuild</span> — Mono's macOS build and packaging pipeline</li>
-                <li>Roslyn compiler integration and F# toolchain work</li>
-              </ul>
             </div>
           </li>
 
@@ -299,14 +160,14 @@
               <span class="timeline-location">San Francisco, CA</span>
             </div>
             <div class="timeline-body">
-              <h2 class="timeline-title">Software Engineer, Mono</h2>
+              <h2 class="timeline-title">Software Engineer</h2>
               <p class="timeline-org">
                 <a href="https://github.com/mono" target="_blank" rel="noopener">Xamarin</a>
               </p>
               <p>
-                Worked on the Mono project — the open-source .NET runtime at the heart of
-                Xamarin's cross-platform mobile platform. Built and maintained the macOS
-                distribution pipeline that shipped Mono to developers globally.
+                Worked on the Mono project — the open-source .NET runtime underlying
+                Xamarin's cross-platform mobile SDK. Maintained the macOS distribution
+                pipeline.
               </p>
             </div>
           </li>
@@ -319,45 +180,28 @@
             <div class="timeline-body">
               <h2 class="timeline-title">Software Engineer &amp; Bioinformatician</h2>
               <p class="timeline-org">
-                <a href="https://www.tgen.org/" target="_blank" rel="noopener">Translational Genomics Research Institute (TGen)</a>
+                <a href="https://www.tgen.org/" target="_blank" rel="noopener">TGen</a>
               </p>
               <p>
-                Built the computational infrastructure behind cancer genomics research: DNA
-                sequencing pipelines, microarray analysis software, and mutation detection tools.
-                Co-author on 41+ peer-reviewed papers with 11,700+ citations.
+                Built DNA sequencing pipelines and cancer mutation-detection tools,
+                including <a href="https://github.com/alexischr/seurat" target="_blank" rel="noopener">Seurat</a>,
+                a tool for identifying somatic mutations from paired tumor/normal genomes.
+                Contributed to the 1000 Genomes Project. Co-author on 41+ peer-reviewed papers.
               </p>
-              <ul class="detail-list">
-                <li>Created <span class="mono">Seurat</span> — tumor/normal somatic mutation detection for cancer NGS</li>
-                <li>Contributed to the international 1000 Genomes Project</li>
-                <li>41+ publications · 11,700+ researcher citations</li>
-              </ul>
             </div>
           </li>
 
         </ol>
 
-        <!-- Open source highlight -->
         <div class="oss-strip">
-          <p class="oss-label">Selected open source</p>
+          <p class="oss-label">Open source</p>
           <div class="oss-links">
-            <a href="https://github.com/mono/mono" target="_blank" rel="noopener" class="oss-pill">
-              mono/mono <span class="oss-stars">⭐ 11.4k</span>
-            </a>
-            <a href="https://github.com/mono/bockbuild" target="_blank" rel="noopener" class="oss-pill">
-              mono/bockbuild
-            </a>
-            <a href="https://github.com/alexischr/seurat" target="_blank" rel="noopener" class="oss-pill">
-              seurat
-            </a>
-            <a href="https://github.com/alexischr/compost" target="_blank" rel="noopener" class="oss-pill">
-              compost
-            </a>
-            <a href="https://github.com/alexischr/mh" target="_blank" rel="noopener" class="oss-pill">
-              mh
-            </a>
-            <a href="https://github.com/wildernesslabs" target="_blank" rel="noopener" class="oss-pill">
-              Meadow.OS
-            </a>
+            <a href="https://github.com/mono/mono" target="_blank" rel="noopener" class="oss-pill">mono/mono</a>
+            <a href="https://github.com/mono/bockbuild" target="_blank" rel="noopener" class="oss-pill">mono/bockbuild</a>
+            <a href="https://github.com/alexischr/seurat" target="_blank" rel="noopener" class="oss-pill">seurat</a>
+            <a href="https://github.com/alexischr/compost" target="_blank" rel="noopener" class="oss-pill">compost</a>
+            <a href="https://github.com/alexischr/mh" target="_blank" rel="noopener" class="oss-pill">mh</a>
+            <a href="https://github.com/wildernesslabs" target="_blank" rel="noopener" class="oss-pill">Meadow.OS</a>
           </div>
         </div>
 
@@ -365,109 +209,40 @@
     </div>
   </section>
 
-  <!-- ===================== PROCESS ===================== -->
-  <section id="process" class="section section-alt">
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section section-alt">
     <div class="container two-col">
       <div class="section-label-col">
-        <span class="section-label">Process</span>
+        <span class="section-label">Contact</span>
       </div>
       <div class="section-content-col">
-        <p class="lead">How a typical engagement works.</p>
-        <ol class="process-steps">
-
-          <li class="process-step">
-            <span class="process-num">01</span>
-            <div class="process-body">
-              <h3>Discovery</h3>
-              <p>
-                We start with a conversation. You explain the problem; I ask uncomfortable
-                questions. By the end, we both have a clear picture of what's needed and
-                whether I'm the right fit. No commitment required.
-              </p>
-            </div>
-          </li>
-
-          <li class="process-step">
-            <span class="process-num">02</span>
-            <div class="process-body">
-              <h3>Scope &amp; Agreement</h3>
-              <p>
-                I work project-based (fixed scope, fixed deliverables) or on retainer
-                (ongoing access, monthly cadence). I'll propose the model that makes sense
-                for your situation, with transparent pricing.
-              </p>
-            </div>
-          </li>
-
-          <li class="process-step">
-            <span class="process-num">03</span>
-            <div class="process-body">
-              <h3>Build &amp; Communicate</h3>
-              <p>
-                I work async by default with regular written updates. You always know where
-                things stand. I prefer shipping working increments early over big-bang
-                deliveries at the end.
-              </p>
-            </div>
-          </li>
-
-          <li class="process-step">
-            <span class="process-num">04</span>
-            <div class="process-body">
-              <h3>Handoff</h3>
-              <p>
-                Code arrives with documentation your team can actually use. I'm available
-                for questions after handoff and can stay on in an advisory capacity
-                if the work needs it.
-              </p>
-            </div>
-          </li>
-
-        </ol>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact" class="section contact-section">
-    <div class="container contact-inner">
-      <h2 class="contact-headline">
-        Have a hard problem?<br/>Let's see if I can help.
-      </h2>
-      <p class="contact-sub">
-        I'm currently open to contract engagements — particularly in embedded/IoT,
-        .NET platform work, developer tooling, and scientific computing. If you're not
-        sure your problem fits, reach out anyway.
-      </p>
-      <a class="btn btn-primary btn-large" href="mailto:alexis@thenull.net">
-        Send me an email →
-      </a>
-      <div class="contact-links">
-        <a class="contact-link" href="mailto:alexis@thenull.net">
-          <span class="contact-icon">✉</span>
-          <span>alexis@thenull.net</span>
-        </a>
-        <a class="contact-link" href="https://github.com/alexischr" target="_blank" rel="noopener">
-          <span class="contact-icon">gh</span>
-          <span>github.com/alexischr</span>
-        </a>
-        <a class="contact-link" href="https://www.linkedin.com/in/alexis-christoforides-997260180/" target="_blank" rel="noopener">
-          <span class="contact-icon">in</span>
-          <span>LinkedIn</span>
-        </a>
-        <a class="contact-link" href="https://bsky.app/profile/thenull.net" target="_blank" rel="noopener">
-          <span class="contact-icon">🦋</span>
-          <span>@thenull.net</span>
-        </a>
+        <p class="lead">
+          I'm open to contract work — embedded systems, .NET/runtime engineering,
+          developer tooling, or anything in that space. Drop me an email and we can
+          go from there.
+        </p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:alexis@thenull.net">
+            alexis@thenull.net
+          </a>
+          <a class="contact-link" href="https://github.com/alexischr" target="_blank" rel="noopener">
+            GitHub
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/alexis-christoforides-997260180/" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+          <a class="contact-link" href="https://bsky.app/profile/thenull.net" target="_blank" rel="noopener">
+            Bluesky
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Alexis Christoforides · Boston, MA</p>
-      <p class="footer-tagline">Software that lives close to the metal.</p>
+    <div class="container">
+      <p>Alexis Christoforides · Boston, MA · <span id="year"></span></p>
     </div>
   </footer>
 
