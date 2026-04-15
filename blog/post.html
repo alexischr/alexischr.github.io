@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Alexis Christoforides</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Alexis Christoforides</a>
+      <ul class="nav-links">
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero blog-hero">
+    <div class="container">
+      <p class="blog-back"><a href="/blog/">&larr; Blog</a></p>
+      <h1 id="post-title" class="hero-name"></h1>
+      <p id="post-date" class="hero-role"></p>
+      <hr class="hero-rule" />
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <article id="post-body" class="post-body"></article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexis Christoforides · Boston, MA · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    const slug = new URLSearchParams(location.search).get('post');
+    if (slug) {
+      fetch(`posts/${slug}.md`)
+        .then(r => {
+          if (!r.ok) throw new Error('not found');
+          return r.text();
+        })
+        .then(md => {
+          // extract title from first # heading
+          const titleMatch = md.match(/^#\s+(.+)$/m);
+          const title = titleMatch ? titleMatch[1] : slug;
+          document.getElementById('post-title').textContent = title;
+          document.title = title + ' — Alexis Christoforides';
+
+          // extract date from slug
+          const dateMatch = slug.match(/^(\d{4}-\d{2}-\d{2})/);
+          if (dateMatch) {
+            document.getElementById('post-date').textContent = dateMatch[1];
+          }
+
+          // render body (strip the # title line)
+          const body = titleMatch ? md.replace(/^#\s+.+\n+/, '') : md;
+          document.getElementById('post-body').innerHTML = marked.parse(body);
+        })
+        .catch(() => {
+          document.getElementById('post-body').innerHTML = '<p>Post not found.</p>';
+        });
+    }
+  </script>
+</body>
+</html>

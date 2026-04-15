@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Alexis Christoforides</title>
+  <meta name="description" content="Blog posts by Alexis Christoforides — software engineer and consultant." />
+  <link rel="canonical" href="https://thenull.net/blog/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Alexis Christoforides</a>
+      <ul class="nav-links">
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero blog-hero">
+    <div class="container">
+      <h1 class="hero-name">Blog</h1>
+      <hr class="hero-rule" />
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <ul id="post-list" class="post-list"></ul>
+      <p id="no-posts" class="muted" style="display:none;">Nothing here yet.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Alexis Christoforides · Boston, MA · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    fetch('posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        const list = document.getElementById('post-list');
+        if (!posts.length) {
+          document.getElementById('no-posts').style.display = '';
+          return;
+        }
+        posts.forEach(p => {
+          const li = document.createElement('li');
+          li.className = 'post-item';
+          li.innerHTML = `
+            <time class="post-date">${p.date}</time>
+            <a class="post-title" href="post.html?post=${encodeURIComponent(p.slug)}">${p.title}</a>
+          `;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
