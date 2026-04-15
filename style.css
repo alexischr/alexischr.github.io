@@ -177,6 +177,27 @@ ul, ol { list-style: none; }
   margin-bottom: 1.75rem;
 }
 
+.hero-resume {
+  margin-bottom: 1.5rem;
+}
+
+.hero-resume a {
+  font-family: var(--mono);
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--accent);
+  padding: .35rem .75rem;
+  border: 1px solid rgba(26, 53, 133, .25);
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color .15s, background .15s;
+}
+.hero-resume a:hover {
+  border-color: var(--accent);
+  background: rgba(26, 53, 133, .06);
+}
+
 .hero-body {
   max-width: 600px;
 }
