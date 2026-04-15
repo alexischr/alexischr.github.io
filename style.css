@@ -145,6 +145,19 @@ ul, ol { list-style: none; }
 }
 .nav-links a:hover { color: var(--text); text-decoration: none; }
 
+.nav-resume {
+  color: var(--accent) !important;
+  border: 1px solid rgba(26, 53, 133, .25);
+  border-radius: 4px;
+  padding: .25rem .6rem;
+  transition: border-color .15s, background .15s, color .15s;
+}
+.nav-resume:hover {
+  border-color: var(--accent);
+  background: rgba(26, 53, 133, .06);
+  color: var(--accent-h) !important;
+}
+
 /* ── Hero ────────────────────────────────────────────────── */
 
 .hero {
@@ -175,27 +188,6 @@ ul, ol { list-style: none; }
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 1.75rem;
-}
-
-.hero-resume {
-  margin-bottom: 1.5rem;
-}
-
-.hero-resume a {
-  font-family: var(--mono);
-  font-size: .82rem;
-  font-weight: 500;
-  color: var(--accent);
-  padding: .35rem .75rem;
-  border: 1px solid rgba(26, 53, 133, .25);
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  transition: border-color .15s, background .15s;
-}
-.hero-resume a:hover {
-  border-color: var(--accent);
-  background: rgba(26, 53, 133, .06);
 }
 
 .hero-body {
