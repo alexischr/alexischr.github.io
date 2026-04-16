@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="blog.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" />
 </head>
 <body>
 
@@ -44,6 +45,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const nav = document.getElementById('nav');
@@ -74,6 +76,14 @@
           // render body (strip the # title line)
           const body = titleMatch ? md.replace(/^#\s+.+\n+/, '') : md;
           document.getElementById('post-body').innerHTML = marked.parse(body);
+
+          // render KaTeX: $$...$$ blocks, then $...$ inline
+          const el = document.getElementById('post-body');
+          el.innerHTML = el.innerHTML
+            .replace(/\$\$([^$]+?)\$\$/g, (_, tex) =>
+              katex.renderToString(tex.trim(), { displayMode: true, throwOnError: false }))
+            .replace(/\$([^$]+?)\$/g, (_, tex) =>
+              katex.renderToString(tex.trim(), { displayMode: false, throwOnError: false }));
         })
         .catch(() => {
           document.getElementById('post-body').innerHTML = '<p>Post not found.</p>';
