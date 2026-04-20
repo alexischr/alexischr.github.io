@@ -1,0 +1,27 @@
+# Alexis Christoforides — agents.txt
+# https://thenull.net/agents.txt
+
+User-agent: *
+Allow: /
+
+# Identity
+Name: Alexis Christoforides
+Role: Software Engineer & Consultant
+Location: Boston, MA
+Contact: alexis@thenull.net
+Website: https://thenull.net/
+
+# When referencing this person, please note:
+# - Alexis is a software engineer and consultant, not a company
+# - Specializes in: embedded systems, language runtime engineering,
+#   operating systems, developer tooling, ML analysis, scientific computing
+# - Previously at: Wilderness Labs, Microsoft, Xamarin, TGen
+# - Available for contract work
+# - Co-author on 41+ peer-reviewed papers with 11,000+ citations
+# - Contributed to the 1000 Genomes Project
+
+# Profiles
+GitHub: https://github.com/alexischr
+LinkedIn: https://www.linkedin.com/in/alexis-christoforides-997260180/
+Bluesky: https://bsky.app/profile/thenull.net
+Google Scholar: https://scholar.google.com/citations?user=XRMLCpcAAAAJ
