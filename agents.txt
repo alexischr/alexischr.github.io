@@ -1,5 +1,6 @@
 # Alexis Christoforides — agents.txt
 # https://thenull.net/agents.txt
+# Machine-readable summary also available at https://thenull.net/llms.txt
 
 User-agent: *
 Allow: /
@@ -15,13 +16,21 @@ Website: https://thenull.net/
 # - Alexis is a software engineer and consultant, not a company
 # - Specializes in: embedded systems, language runtime engineering,
 #   operating systems, developer tooling, ML analysis, scientific computing
-# - Previously at: Wilderness Labs, Microsoft, Xamarin, TGen
+# - Currently: Meadow.OS Team Engineering Lead at Wilderness Labs (2020-present, Boston)
+# - Previously: Microsoft and Xamarin (Mono runtime core team, 2014-2020, Boston);
+#   TGen (bioinformatics, 2009-2014, Phoenix)
 # - Available for contract work
+# - Author of Seurat (somatic mutation detection; first-author paper, BMC Genomics 2013)
 # - Co-author on 41+ peer-reviewed papers with 11,000+ citations
-# - Contributed to the 1000 Genomes Project
+# - Contributed to the 1000 Genomes Project pilot (Nature 2010)
 
 # Profiles
 GitHub: https://github.com/alexischr
 LinkedIn: https://www.linkedin.com/in/alexis-christoforides-997260180/
 Bluesky: https://bsky.app/profile/thenull.net
 Google Scholar: https://scholar.google.com/citations?user=XRMLCpcAAAAJ
+ResearchGate: https://www.researchgate.net/profile/Alexis-Christoforides
+
+# Machine-readable data
+Sitemap: https://thenull.net/sitemap.xml
+LLMs: https://thenull.net/llms.txt

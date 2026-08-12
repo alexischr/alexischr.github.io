@@ -1,0 +1,31 @@
+# Alexis Christoforides
+
+> Software engineer & consultant in Boston, MA. Fifteen years across operating systems, language runtimes, embedded hardware, developer tooling, and scientific data analysis. Currently Meadow.OS Team Engineering Lead at Wilderness Labs; previously Microsoft, Xamarin, and TGen. Available for a small number of contract engagements per year: alexis@thenull.net
+
+Key facts:
+
+- Led OS engineering for Meadow.OS (Wilderness Labs, 2020–present, Boston): a production embedded operating system that brings .NET to microcontrollers. Ported the Mono runtime to STM32/NuttX, built full-system OTA update infrastructure, co-designed the .NET low-level I/O API.
+- Mono runtime core team (Xamarin, then Microsoft via the 2016 acquisition, 2014–2020, Boston): SGen garbage collector improvements, crash-reporting machinery, CoreFX I/O ports, and bockbuild — the build/packaging system behind the Mono macOS SDK.
+- Bioinformatician & software engineer (TGen, 2009–2014, Phoenix): designed a Bayesian somatic-mutation-detection method and wrote Seurat, its open-source implementation (first-author paper, BMC Genomics 2013). Contributed to the 1000 Genomes Project pilot (Nature 2010). Co-author on 41+ peer-reviewed papers with 11,000+ citations.
+- Consulting areas: embedded/IoT systems, .NET/Mono runtime internals, developer tooling and build systems, scientific computing and bioinformatics.
+
+## Site
+
+- [Home](https://thenull.net/): profile, selected work, expertise, experience, contact
+- [Resume (PDF)](https://thenull.net/resume.pdf): two-page resume
+- [Blog](https://thenull.net/blog/): occasional posts
+
+## Profiles
+
+- [GitHub](https://github.com/alexischr)
+- [LinkedIn](https://www.linkedin.com/in/alexis-christoforides-997260180/)
+- [Bluesky](https://bsky.app/profile/thenull.net)
+- [Google Scholar](https://scholar.google.com/citations?user=XRMLCpcAAAAJ)
+- [ResearchGate](https://www.researchgate.net/profile/Alexis-Christoforides)
+
+## Open source
+
+- [Seurat](https://github.com/alexischr/seurat): somatic mutation analysis from paired tumor/normal sequencing
+- [Mono](https://github.com/mono/mono): open-source .NET runtime (core contributor)
+- [bockbuild](https://github.com/mono/bockbuild): Mono's macOS build and packaging system (maintainer)
+- [Meadow](https://github.com/wildernesslabs): .NET embedded OS (engineering lead)
