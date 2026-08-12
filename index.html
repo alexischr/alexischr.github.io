@@ -107,7 +107,7 @@
       {
         "@type": "Occupation",
         "name": "Software Engineer",
-        "description": "Contributed to the Mono .NET runtime, bockbuild packaging system, Roslyn compiler, and F# tooling",
+        "description": "Contributed to the Mono .NET runtime and the bockbuild packaging system",
         "occupationLocation": { "@type": "City", "name": "San Francisco, CA" },
         "hiringOrganization": { "@type": "Organization", "name": "Microsoft", "url": "https://www.microsoft.com/" }
       },
@@ -153,7 +153,7 @@
     <div class="nav-inner">
       <a class="nav-logo" href="#top"><span class="nav-logo-full">Alexis Christoforides</span><span class="nav-logo-short" aria-hidden="true">AC</span></a>
       <ul class="nav-links">
-        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="resume.pdf" class="nav-resume">Resume</a></li>
@@ -188,8 +188,103 @@
 
   <main id="main">
 
+  <!-- SELECTED WORK -->
+  <section id="work" class="section section-alt">
+    <div class="container two-col">
+      <div class="section-label-col">
+        <h2 class="section-label">Selected work</h2>
+      </div>
+      <div class="section-content-col">
+
+        <article class="case">
+          <h3 class="case-title">Meadow.OS — a .NET operating system for microcontrollers</h3>
+          <p class="case-meta">Wilderness Labs · 2020 – Present</p>
+          <p>
+            <span class="case-label">Problem</span>
+            Wilderness Labs set out to let developers build secure, connected
+            device firmware in C# and .NET — on microcontrollers with a few
+            dozen megabytes of RAM and flash, a class of hardware normally
+            programmed in C.
+          </p>
+          <p>
+            <span class="case-label">What I did</span>
+            Led OS engineering for
+            <a href="https://github.com/wildernesslabs" target="_blank" rel="noopener">Meadow</a>.
+            I ported the Mono runtime to STM32 hardware on the NuttX RTOS,
+            integrated mbedTLS for device TLS, designed the full-system
+            over-the-air update machinery — from custom bootloader to MQTT
+            delivery — co-designed the .NET low-level I/O API (GPIO, SPI,
+            I²C, interrupts), ported TensorFlow Lite for Microcontrollers
+            with .NET bindings, and ran the OS release process.
+          </p>
+          <p>
+            <span class="case-label">Outcome</span>
+            A production embedded operating system shipping on commercial
+            hardware: developers write, monitor, and remotely update device
+            applications entirely in .NET.
+          </p>
+        </article>
+
+        <article class="case">
+          <h3 class="case-title">Mono — runtime engineering for cross-platform .NET</h3>
+          <p class="case-meta">Xamarin &amp; Microsoft · 2014 – 2020</p>
+          <p>
+            <span class="case-label">Problem</span>
+            <a href="https://github.com/mono/mono" target="_blank" rel="noopener">Mono</a>
+            was the open-source .NET runtime underneath every Xamarin iOS and
+            Android app. Garbage-collector behavior, runtime reliability, and
+            the release pipeline behind a &gt;1&nbsp;GB macOS SDK needed
+            sustained core-team work.
+          </p>
+          <p>
+            <span class="case-label">What I did</span>
+            Improved the SGen generational garbage collector, hardened the
+            runtime's native crash-reporting machinery, ported file and
+            network I/O subsystems from Microsoft's CoreFX, maintained
+            <a href="https://github.com/mono/bockbuild" target="_blank" rel="noopener">bockbuild</a>
+            — the build and packaging system behind the Mono macOS SDK — and
+            integrated runtime releases into the Xamarin products.
+          </p>
+          <p>
+            <span class="case-label">Outcome</span>
+            Runtime and tooling releases shipped continuously to Xamarin's
+            developer base, through the Microsoft acquisition and beyond.
+          </p>
+        </article>
+
+        <article class="case">
+          <h3 class="case-title">Seurat — finding cancer mutations in genome pairs</h3>
+          <p class="case-meta">TGen · 2009 – 2014</p>
+          <p>
+            <span class="case-label">Problem</span>
+            Detecting somatic mutations means comparing a patient's tumor and
+            normal genomes at whole-genome scale — with early-generation
+            sequencing noise, as much a statistics problem as a software one.
+          </p>
+          <p>
+            <span class="case-label">What I did</span>
+            Designed a Bayesian method for tumor/normal comparison and wrote
+            <a href="https://github.com/alexischr/seurat" target="_blank" rel="noopener">Seurat</a>,
+            its open-source implementation
+            (<a href="https://doi.org/10.1186/1471-2164-14-302" target="_blank" rel="noopener">first-author paper, <em>BMC Genomics</em></a>).
+            Helped design and operate TGen's HPC cancer-genomics pipelines, and
+            contributed to the pilot phase of the
+            <a href="https://doi.org/10.1038/nature09534" target="_blank" rel="noopener">1000 Genomes Project</a>.
+          </p>
+          <p>
+            <span class="case-label">Outcome</span>
+            Co-author on 41+ peer-reviewed papers cited over 11,000 times; the
+            1000 Genomes dataset became the reference map of human genetic
+            variation for hundreds of subsequent studies.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <!-- EXPERTISE -->
-  <section id="expertise" class="section section-alt">
+  <section id="expertise" class="section">
     <div class="container two-col">
       <div class="section-label-col">
         <h2 class="section-label">Expertise</h2>
@@ -202,22 +297,16 @@
             <dd>
               Hardware bringup, RTOS integration, hardware abstraction layers,
               OTA update infrastructure, and running managed runtimes on
-              constrained hardware. This work led to
-              <a href="https://github.com/wildernesslabs" target="_blank" rel="noopener">Meadow.OS</a>,
-              a production embedded OS that brings .NET to
-              microcontrollers.
+              constrained hardware.
             </dd>
           </div>
 
           <div class="expertise-item">
             <dt>Runtime &amp; platform engineering</dt>
             <dd>
-              Deep .NET and Mono runtime work: JIT/AOT compilation, interop
-              layers, CLR internals, porting managed code to new platforms.
-              Several years as a core contributor to
-              <a href="https://github.com/mono/mono" target="_blank" rel="noopener">Mono</a>,
-              the open-source runtime that powered <a href="https://xamarin.com" target="_blank" rel="noopener">Xamarin</a>, plus work on the
-              Roslyn compiler and F# toolchain.
+              .NET and Mono runtime internals: JIT/AOT compilation, garbage
+              collection, interop layers, and porting managed code to new
+              platforms.
             </dd>
           </div>
 
@@ -225,23 +314,15 @@
             <dt>Developer tooling &amp; build systems</dt>
             <dd>
               Build infrastructure, cross-platform packaging, and CI/CD for
-              complex native projects. This includes
-              <a href="https://github.com/mono/bockbuild" target="_blank" rel="noopener">bockbuild</a>,
-              Mono's macOS build and packaging system, which I maintained
-              for several years.
+              complex native projects.
             </dd>
           </div>
 
           <div class="expertise-item">
             <dt>Scientific computing &amp; bioinformatics</dt>
             <dd>
-              Genomics pipelines, sequencing data analysis, and cancer mutation
-              detection. Three years of this work at TGen, contributing to
-              the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3042601/" target="_blank" rel="noopener">1000 Genomes Project</a>
-              and co-authoring 41+ peer-reviewed
-              papers cited over 11,000 times. Tools include
-              <a href="https://github.com/alexischr/seurat" target="_blank" rel="noopener">Seurat</a>,
-              for somatic mutation analysis from paired tumor/normal sequencing.
+              Genomics pipelines, sequencing data analysis, and statistical
+              methods for large scientific datasets.
             </dd>
           </div>
 
@@ -263,8 +344,56 @@
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="container two-col">
+      <div class="section-label-col">
+        <h2 class="section-label">Experience</h2>
+      </div>
+      <div class="section-content-col">
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-date">2020 – Present</span>
+              <span class="timeline-location">Boston, MA</span>
+            </div>
+            <p class="timeline-title">Meadow.OS Team Engineering Lead</p>
+            <p class="timeline-org">Wilderness Labs</p>
+            <p>Leading OS engineering for a production embedded operating
+               system that brings .NET to microcontrollers.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-date">2014 – 2020</span>
+              <span class="timeline-location">San Francisco / remote</span>
+            </div>
+            <p class="timeline-title">Mono Runtime Engineer</p>
+            <p class="timeline-org">Xamarin, then Microsoft <span class="via">via the 2016 acquisition</span></p>
+            <p>Core team on the open-source .NET runtime powering Xamarin:
+               garbage collection, runtime reliability, and macOS SDK release
+               engineering.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-date">2009 – 2014</span>
+              <span class="timeline-location">Phoenix, AZ</span>
+            </div>
+            <p class="timeline-title">Bioinformatician &amp; Software Engineer</p>
+            <p class="timeline-org">Translational Genomics Research Institute (TGen)</p>
+            <p>Cancer-genomics pipelines, somatic mutation detection methods,
+               and the 1000 Genomes Project.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
-  <section id="contact" class="section section-alt">
+  <section id="contact" class="section">
     <div class="container two-col">
       <div class="section-label-col">
         <h2 class="section-label">Contact</h2>
@@ -274,8 +403,12 @@
           I take on contract work in the areas above — typically project-based
           or short retainers. If you think there's a fit, I'd like to hear about it.
         </p>
+        <p>
+          The most useful first email tells me what you're building, where
+          it's stuck, and your rough timeline.
+        </p>
         <div class="contact-links">
-          <a href="mailto:alexis@thenull.net" class="contact-primary">alexis@thenull.net</a>
+          <a href="mailto:alexis@thenull.net?subject=Inquiry%20via%20thenull.net" class="contact-primary">alexis@thenull.net</a>
         </div>
         <div class="contact-elsewhere">
           <a href="https://github.com/alexischr" target="_blank" rel="noopener">GitHub</a>

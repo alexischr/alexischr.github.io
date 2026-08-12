@@ -274,6 +274,50 @@ ul, ol { list-style: none; }
   line-height: 1.75;
 }
 
+/* ── Case studies ────────────────────────────────────────── */
+
+.case {
+  padding-block: 2rem;
+  border-top: 1px solid var(--border);
+}
+.case:last-of-type { border-bottom: 1px solid var(--border); }
+.case:first-of-type { padding-top: .5rem; border-top: none; }
+
+.case-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.case-meta {
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: .35rem 0 1.25rem;
+}
+
+.case > p {
+  font-size: .92rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: .9rem;
+}
+
+.case-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: .15rem;
+}
+
 /* ── Timeline ────────────────────────────────────────────── */
 
 .timeline {
@@ -297,7 +341,9 @@ ul, ol { list-style: none; }
   background: var(--bg);
   border: 2px solid var(--border);
 }
-.timeline-item:first-child::before {
+.section-alt .timeline-item::before { background: var(--bg-alt); }
+.timeline-item:first-child::before,
+.section-alt .timeline-item:first-child::before {
   background: var(--accent);
   border-color: var(--accent);
 }
