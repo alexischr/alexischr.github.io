@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>og-card</title>
+<!--
+  Source for /og-image.png (1200×630 social preview card).
+  Regenerate with:
+    npx playwright screenshot --viewport-size=1200,630 --wait-for-timeout=3000 \
+      "file://$PWD/assets/og-card.html" og-image.png
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: rgb(255, 255, 225);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 96px;
+  }
+  .name {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 88px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #0c1220;
+    letter-spacing: -0.01em;
+  }
+  .rule {
+    border: none;
+    border-top: 2px solid rgb(205, 205, 170);
+    width: 280px;
+    margin: 42px 0;
+  }
+  .role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #4a5570;
+  }
+  .domain {
+    position: absolute;
+    left: 96px;
+    bottom: 72px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+    font-weight: 500;
+    color: #1a3585;
+  }
+</style>
+</head>
+<body>
+  <div class="name">Alexis Christoforides</div>
+  <hr class="rule" />
+  <div class="role">Software Engineer &amp; Consultant &middot; Boston, MA</div>
+  <div class="domain">thenull.net</div>
+</body>
+</html>
