@@ -27,16 +27,34 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "Hello world",
-    "datePublished": "2026-04-15",
-    "url": "https://thenull.net/blog/2026-04-15-hello-world",
-    "description": "This is the first post on my blog. More to come.",
-    "author": {
-      "@type": "Person",
-      "name": "Alexis Christoforides",
-      "url": "https://thenull.net/"
+    "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://thenull.net/blog/2026-04-15-hello-world#post",
+      "headline": "Hello world",
+      "datePublished": "2026-04-15",
+      "url": "https://thenull.net/blog/2026-04-15-hello-world",
+      "mainEntityOfPage": "https://thenull.net/blog/2026-04-15-hello-world",
+      "description": "This is the first post on my blog. More to come.",
+      "image": "https://thenull.net/og-image.png",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://thenull.net/blog/#blog" },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thenull.net/#person",
+        "name": "Alexis Christoforides",
+        "url": "https://thenull.net/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thenull.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://thenull.net/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Hello world" }
+      ]
     }
+    ]
   }
   </script>
 

@@ -39,7 +39,37 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@graph": [
+    {
+    "@type": "WebSite",
+    "@id": "https://thenull.net/#website",
+    "url": "https://thenull.net/",
+    "name": "Alexis Christoforides",
+    "publisher": { "@id": "https://thenull.net/#person" },
+    "inLanguage": "en-US"
+    },
+    {
+    "@type": "ProfilePage",
+    "@id": "https://thenull.net/#profilepage",
+    "url": "https://thenull.net/",
+    "name": "Alexis Christoforides — Software Engineer & Consultant, Boston MA",
+    "isPartOf": { "@id": "https://thenull.net/#website" },
+    "mainEntity": { "@id": "https://thenull.net/#person" },
+    "primaryImageOfPage": "https://thenull.net/og-image.png",
+    "inLanguage": "en-US"
+    },
+    {
+    "@type": "SoftwareSourceCode",
+    "@id": "https://thenull.net/#seurat",
+    "name": "Seurat",
+    "description": "Open-source tool for somatic mutation detection from paired tumor/normal DNA sequencing",
+    "codeRepository": "https://github.com/alexischr/seurat",
+    "author": { "@id": "https://thenull.net/#person" }
+    },
+    {
     "@type": "Person",
+    "@id": "https://thenull.net/#person",
+    "mainEntityOfPage": { "@id": "https://thenull.net/#profilepage" },
     "name": "Alexis Christoforides",
     "givenName": "Alexis",
     "familyName": "Christoforides",
@@ -47,6 +77,7 @@
     "image": "https://thenull.net/og-image.png",
     "email": "mailto:alexis@thenull.net",
     "jobTitle": "Software Engineer & Consultant",
+    "worksFor": { "@type": "Organization", "name": "Wilderness Labs", "url": "https://www.wildernesslabs.co/" },
     "description": "Software engineer and consultant specializing in embedded systems, language runtime engineering, operating systems, developer tooling, ML analysis, and scientific computing. Available for contract engagements.",
     "address": {
       "@type": "PostalAddress",
@@ -133,9 +164,11 @@
         "name": "Software Engineering & Consulting",
         "description": "Contract software engineering services: embedded systems, language runtime engineering, operating systems, developer tooling, build systems, ML analysis, and scientific computing",
         "areaServed": "Worldwide",
-        "provider": { "@type": "Person", "name": "Alexis Christoforides" }
+        "provider": { "@id": "https://thenull.net/#person" }
       }
     }
+    }
+    ]
   }
   </script>
 

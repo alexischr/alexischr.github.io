@@ -27,16 +27,34 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "{{TITLE_JSON}}",
-    "datePublished": "{{DATE_ISO}}",
-    "url": "{{CANONICAL}}",
-    "description": "{{DESCRIPTION_JSON}}",
-    "author": {
-      "@type": "Person",
-      "name": "Alexis Christoforides",
-      "url": "https://thenull.net/"
+    "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "{{CANONICAL}}#post",
+      "headline": "{{TITLE_JSON}}",
+      "datePublished": "{{DATE_ISO}}",
+      "url": "{{CANONICAL}}",
+      "mainEntityOfPage": "{{CANONICAL}}",
+      "description": "{{DESCRIPTION_JSON}}",
+      "image": "https://thenull.net/og-image.png",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://thenull.net/blog/#blog" },
+      "author": {
+        "@type": "Person",
+        "@id": "https://thenull.net/#person",
+        "name": "Alexis Christoforides",
+        "url": "https://thenull.net/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thenull.net/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://thenull.net/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "{{TITLE_JSON}}" }
+      ]
     }
+    ]
   }
   </script>
 
