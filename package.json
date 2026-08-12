@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "node blog/build.js"
+  },
+  "devDependencies": {
+    "katex": "^0.16.11",
+    "marked": "^12.0.2"
+  }
+}
